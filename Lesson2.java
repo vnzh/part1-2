@@ -89,7 +89,6 @@ public class Lesson2 {
 
     private static boolean checkTransformable (String s) throws Array4x4Exeption, NotNumberExeption {
          char[] c = s.toCharArray();
-         int[][] arr = new  int[4][4];
          int carr = 0;
          boolean flag = false;
          int k = 0, j = 0;
@@ -99,13 +98,11 @@ public class Lesson2 {
                 carr = carr*10 + c[i] - 48;
             } else {
                 if (c[i] == ' ' & flag == true) {
-                    arr[k][j] = carr;
                     j = j + 1;
                     carr = 0;
                     flag = false;
                 } else {
                     if (c[i] == '\\' & i+1 <c.length & c[i+1] == 'n' & flag == true) {
-                        arr[k][j] = carr;
                         k = k + 1;
                         if (j !=3) {
                             throw new Array4x4Exeption();
