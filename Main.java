@@ -1,4 +1,4 @@
-public class Main extends Thread {
+public class Main {
     static final int size = 10000000;
     static final int h = size / 2;
 
